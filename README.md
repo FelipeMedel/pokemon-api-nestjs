@@ -47,6 +47,26 @@ yarn start:dev
 http://localhost:3000/api/v2/seed
 ```
 
+## Modo Producción
+
+Para crear la imagen del contenedor de la aplicación
+
+```bash
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+
+Para ejecutar el y construir el contenedor
+
+```bash
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up
+```
+
+> NOTA: Por defecto, docker-compose usa el archivo ```.env```, por lo que si tienen el archivo ```.env``` y lo configuran con sus variables de entorno de producción, bastaría con ejecutar el siguiente comando
+
+```bash
+docker-compose -f docker-compose.prod.yaml up --build
+```
+
 ## Stack usado
 
 * MongoDB

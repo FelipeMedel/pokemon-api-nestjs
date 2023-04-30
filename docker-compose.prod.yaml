@@ -14,11 +14,11 @@ services:
       - "${PORT}:${PORT}"
     # working_dir: /var/www/pokedex
     environment:
-      MONGODB: ${MONGODB}
+      MONGO_DB: ${MONGO_DB}
       PORT: ${PORT}
       DEFAULT_LIMIT: ${DEFAULT_LIMIT}
     # volumes:
-    #   - ./:/var/www/pokedex
+      # - ./:/var/www/pokedex
 
   db:
     image: mongo:5
